@@ -11,6 +11,73 @@ module.exports = {
       "primary-active": "#4EC9D0",
       "primary-hover": "#353FA4",
     },
+    fontSize: {
+      fontSize: {
+        "s-medium": [
+          "14px",
+          {
+            lineHeight: "auto",
+            fontWeight: "500",
+          },
+        ],
+        "m-regular": [
+          "16px",
+          {
+            lineHeight: "auto",
+            fontWeight: "400",
+          },
+        ],
+        "m-medium": [
+          "16px",
+          {
+            lineHeight: "auto",
+            fontWeight: "500",
+          },
+        ],
+        "m-semibold": [
+          "16px",
+          {
+            lineHeight: "auto",
+            fontWeight: "600",
+          },
+        ],
+        "l-medium": [
+          "20px",
+          {
+            lineHeight: "auto",
+            fontWeight: "600",
+          },
+        ],
+        "l-bold": [
+          "20px",
+          {
+            lineHeight: "auto",
+            fontWeight: "700",
+          },
+        ],
+        "heading-s": [
+          "24px",
+          {
+            lineHeight: "auto",
+            fontWeight: "700",
+          },
+        ],
+        "heading-m": [
+          "28px",
+          {
+            lineHeight: "auto",
+            fontWeight: "700",
+          },
+        ],
+        "heading-l": [
+          "32px",
+          {
+            lineHeight: "auto",
+            fontWeight: "700",
+          },
+        ],
+      },
+    },
     extend: {
       backgroundImage: (theme) => ({
         "primary-gradient-to-t": `linear-gradient(to top, ${theme(
