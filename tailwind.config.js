@@ -5,13 +5,16 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      "primary-main": "#232967",
-      "primary-second": "#191D4D",
-      "primary-active": "#4EC9D0",
-      "primary-hover": "#353FA4",
-    },
-    fontSize: {
+    extend: {
+      colors: {
+        "primary-main": "#232967",
+        "primary-second": "#191D4D",
+        "primary-active": "#4EC9D0",
+        "primary-hover": "#353FA4",
+      },
+      fontFamily: {
+        poppins: "Poppins', sans-serif",
+      },
       fontSize: {
         "s-medium": [
           "14px",
@@ -77,8 +80,6 @@ module.exports = {
           },
         ],
       },
-    },
-    extend: {
       backgroundImage: (theme) => ({
         "primary-gradient-to-t": `linear-gradient(to top, ${theme(
           "colors.primary-second"
