@@ -12,8 +12,11 @@ module.exports = {
         "primary-active": "#4EC9D0",
         "primary-hover": "#353FA4",
       },
+      boxShadow: {
+        "top-footer": "0px -5px 32px -10px rgba(0,0,0,0.1)",
+      },
       fontFamily: {
-        poppins: "Poppins', sans-serif",
+        poppins: "'Poppins', sans-serif",
       },
       fontSize: {
         "s-medium": [
