@@ -44,7 +44,7 @@ function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
 
 export default function Header() {
   const [focusedLink, setFocusedLink] = useState(null);
-  const [selectedLink, setSelectedLink] = useState("Home");
+  const [selectedLink, setSelectedLink] = useState("Beranda");
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
   const links = ["Beranda", "Tentang", "Anggota", "Dokumentasi"];
@@ -141,7 +141,7 @@ export default function Header() {
                   className={cn("relative py-3 px-4 font-poppins ", {
                     [`text-l-bold text-primary-active lg:text-m-semibold`]:
                       selectedLink === link,
-                    [`text-l-medium  text-white/60  lg:text-m-medium`]:
+                    [`text-l-medium  text-white/80  lg:text-m-medium`]:
                       selectedLink !== link,
                   })}
                   key={link}
