@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -7,28 +8,40 @@ export default function Home() {
       <Head>
         <title>Ouroboros Tech | Home</title>
       </Head>
-      <section className="flex h-screen w-full flex-row items-center justify-center text-white">
-        <div className="w-2/3 md:w-1/2">
-          <h1 className="my-4 text-heading-s md:text-heading-m lg:text-heading-l">
-            Selamat Datang di UKM Blockchain Institut Teknologi Kalimantan
-          </h1>
-          <p className="my-4 text-m-medium">
-            Unit Kegiatan Mahasiswa Institut Teknologi Kalimantan yang bergerak
-            dibidang IT dan berfokus pada teknologi Blockchain
-          </p>
-          <div className="flex flex-col gap-4 md:flex-row">
-            <button
+      <section className="flex h-screen w-full flex-row items-center justify-center px-10 text-white md:px-20  xl:px-[120px]">
+        <div className="flex w-full flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-left ">
+          <div className="mt-12 flex flex-col gap-2 lg:w-3/5 xl:w-1/2 2xl:w-[45%]">
+            <h1 className="text-3xl font-bold tracking-normal md:text-4xl xl:text-5xl">
+              UKM Blockchain
+            </h1>
+            <h1 className=" text-xl font-bold tracking-normal md:text-2xl lg:text-3xl xl:text-4xl">
+              Institut Teknologi Kalimantan
+            </h1>
+            <p className="mt-4 text-base leading-6 md:text-lg lg:text-xl">
+              Unit Kegiatan Mahasiswa Institut Teknologi Kalimantan yang
+              bergerak dibidang IT dan berfokus pada teknologi Blockchain
+            </p>
+          </div>
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 md:flex-row lg:w-1/2 xl:w-2/6 ">
+            <motion.button
+              whileTap={{
+                scale: 0.9,
+              }}
               type="button"
-              className="rounded-full border-2 border-primary-active px-4 py-3 transition-all ease-in hover:bg-primary-active"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
             >
               Tentang Kami
-            </button>
-            <button
+            </motion.button>
+
+            <motion.button
+              whileTap={{
+                scale: 0.9,
+              }}
               type="button"
-              className="rounded-full border-2 border-primary-active bg-primary-active px-4 py-3"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-primary-hover to-primary-active px-4  py-3 font-semibold hover:brightness-95"
             >
-              Project Kami
-            </button>
+              Proyek Kami
+            </motion.button>
           </div>
         </div>
         <div className="absolute top-0 left-0 -z-10 h-screen w-full opacity-30">
