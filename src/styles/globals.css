@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply h-full;
+    @apply h-full font-poppins;
   }
   #__next {
     @apply relative flex min-h-screen flex-col bg-primary-main;
