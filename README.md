@@ -8,10 +8,6 @@ Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 
 ![Screenshot 2]()
 
-## References
-
-- https://gramedia.com
-
 ## Links
 
 ### Frontend
@@ -19,6 +15,10 @@ Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 Production:
 
 - `https://ouroboros-tech.netlify.app`
+
+Staging
+
+- `https://ouroboros-staging.netlify.app/`
 
 Local:
 
