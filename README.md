@@ -16,6 +16,10 @@ Production:
 
 - `https://ouroboros-tech.netlify.app`
 
+Staging
+
+- `https://ouroboros-staging.netlify.app/`
+
 Local:
 
 - `http://localhost:3000`
