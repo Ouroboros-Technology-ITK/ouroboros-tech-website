@@ -89,20 +89,20 @@ export default function Header() {
     >
       <div className="itemVariantss-center flex items-center gap-[10px]">
         <Image
-          src="/images/kampus-merdeka-logo.png"
+          src="/images/logo-kampus-merdeka.png"
           width={50}
           height={50}
-          sizes="100vw"
-          className="h-auto w-full"
+          sizes="100%"
+          className="object-cover"
           alt="Kampus Merdeka Logo"
           quality={100}
         />
         <Image
-          src="/images/itk-logo.png"
+          src="/images/logo-itk.png"
           width={50}
           height={50}
-          sizes="40vw"
-          className="h-auto w-full"
+          sizes="100%"
+          className="object-cover"
           alt="Kampus Merdeka Logo"
           quality={100}
         />
