@@ -85,7 +85,7 @@ export default function Header() {
   return (
     <header
       className="itemVariantss-center fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
-    bg-primary-main px-10 py-4 font-poppins text-white shadow-md md:px-20 xl:px-[120px]"
+    bg-primary-main px-10 py-6 font-poppins text-white shadow-md md:px-20 xl:px-[120px]"
     >
       <div className="itemVariantss-center flex items-center gap-[10px]">
         <Image
