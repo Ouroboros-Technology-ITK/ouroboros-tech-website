@@ -127,7 +127,6 @@ export default function Header() {
                 ? "show"
                 : "hidden"
             }
-            layout
           >
             <BiX
               size={48}
@@ -148,7 +147,6 @@ export default function Header() {
                   onMouseEnter={() => setFocusedLink(() => link)}
                   onClick={() => setSelectedLink(() => link)}
                   variants={itemVariants}
-                  layout
                 >
                   <NavbarLink
                     link={link}
