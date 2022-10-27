@@ -47,7 +47,7 @@ export default function Header() {
   const [selectedLink, setSelectedLink] = useState("Home");
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
-  const links = ["Home", "About", "Documentation", "Member"];
+  const links = ["Beranda", "Tentang", "Anggota", "Dokumentasi"];
 
   // Variabel variants untuk
   const containerVariants = {
@@ -90,10 +90,10 @@ export default function Header() {
       <div className="itemVariantss-center flex items-center gap-[10px]">
         <Image
           src="/images/logo-kampus-merdeka.png"
-          width={50}
-          height={50}
+          width="0"
+          height="0"
           sizes="100%"
-          className="object-cover"
+          className="h-[10%] w-[10%] object-cover"
           alt="Kampus Merdeka Logo"
           quality={100}
         />
@@ -102,11 +102,13 @@ export default function Header() {
           width={50}
           height={50}
           sizes="100%"
-          className="object-cover"
+          className="h-[5%] w-[5%] object-cover"
           alt="Kampus Merdeka Logo"
           quality={100}
         />
-        <h1 className="text-s-medium font-bold">BLOCKCHAIN ITK</h1>
+        <h1 className="text-s-medium font-bold lg:text-heading-s">
+          BLOCKCHAIN ITK
+        </h1>
       </div>
 
       <LayoutGroup>
