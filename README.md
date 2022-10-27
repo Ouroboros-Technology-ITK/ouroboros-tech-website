@@ -1,6 +1,6 @@
 # Ouroboros Technologies
 
-This is a official website for Ouroboros Technologies.
+This is the official website for Ouroboros Technologies.
 
 Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 
