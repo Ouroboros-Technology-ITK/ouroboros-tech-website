@@ -5,6 +5,14 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "360px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
         "primary-main": "#232967",
@@ -14,6 +22,8 @@ module.exports = {
       },
       boxShadow: {
         "top-footer": "0px -5px 32px -10px rgba(0,0,0,0.1)",
+        "glow-card-1":
+          "2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset, -2px -2px 20px 1px rgba(78, 201, 208, 0.5),8px 8px 28px 0px rgba(25, 29, 77, 0.5),-2px -2px 8px 0px rgba(78, 201, 208, 0.2),8px 8px 16px 0px rgba(25, 29, 77, 1)",
       },
       fontFamily: {
         poppins: "'Poppins', sans-serif",
