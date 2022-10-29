@@ -8,7 +8,13 @@ import Link from "next/link";
 function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
   return (
     <>
-      <Link onClick={setNavbarIsOpen} href={`#${link}`}>
+      <Link
+        onClick={setNavbarIsOpen}
+        href={`#${link}`}
+        style={{
+          whiteSpace: "nowrap",
+        }}
+      >
         {link}
       </Link>
       {focusedLink === link ? (
@@ -47,7 +53,7 @@ export default function Header() {
   const [selectedLink, setSelectedLink] = useState("Home");
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
-  const links = ["Home", "About", "Documentation", "Member"];
+  const links = ["Home", "About", "Member", "Documentation", "Our Program"];
 
   // Variabel variants untuk
   const containerVariants = {
@@ -77,7 +83,6 @@ export default function Header() {
     // Karena Next.js melakukan pre-rendering jadi otomatis window ini akan undefine
     // Jadi untuk mendapatkan property innerWidth dari window itu menggunakan useEffect hook
     // Karena useEffect hook berjalan di client-side
-
     const windowWidth = window.innerWidth;
     setIsUnderLargeSize(windowWidth <= 1024);
   }, []);
@@ -85,28 +90,37 @@ export default function Header() {
   return (
     <header
       className="itemVariantss-center fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
-    bg-primary-main px-10 py-4 font-poppins text-white shadow-md md:px-20 xl:px-[120px]"
+    bg-primary-main px-10 py-2 font-poppins text-white shadow-md xs:py-6 md:px-20 xl:px-[120px]"
     >
       <div className="itemVariantss-center flex items-center gap-[10px]">
         <Image
-          src="/images/kampus-merdeka-logo.png"
-          width={50}
-          height={50}
-          sizes="100vw"
-          className="h-auto w-full"
+          src="/images/logo-kampus-merdeka.png"
+          width="0"
+          height="0"
+          sizes="100%"
+          className="h-auto w-[13%] object-cover sm:w-[10%] xl:w-[7%] "
           alt="Kampus Merdeka Logo"
           quality={100}
         />
         <Image
-          src="/images/itk-logo.png"
+          src="/images/logo-itk.png"
           width={50}
           height={50}
-          sizes="40vw"
-          className="h-auto w-full"
+          sizes="100%"
+          className="h-auto w-[10%] object-cover sm:w-[7%] xl:w-[5%]"
           alt="Kampus Merdeka Logo"
           quality={100}
         />
-        <h1 className="text-s-medium font-bold">BLOCKCHAIN ITK</h1>
+
+        <Image
+          src="/images/ouroboros-logo-tosca-text.png"
+          width={50}
+          height={50}
+          sizes="100%"
+          className="h-auto w-[16%] object-cover sm:w-[12%] xl:w-[8%] "
+          alt="Kampus Merdeka Logo"
+          quality={100}
+        />
       </div>
 
       <LayoutGroup>
@@ -117,8 +131,7 @@ export default function Header() {
             onClick={() => setNavbarIsOpen((prevCondition) => !prevCondition)}
           />
           <motion.ul
-            className="itemVariantss-center absolute top-0 bottom-0 flex h-screen flex-col items-center justify-center 
-            gap-8 bg-primary-second/90 backdrop-blur-sm lg:static lg:h-full lg:flex-row lg:gap-4 lg:bg-transparent"
+            className="absolute top-0 bottom-0 flex h-screen flex-col items-center  justify-center  gap-0 bg-primary-second/90 backdrop-blur-sm xs:gap-6 md:gap-12 lg:static lg:h-full lg:flex-row lg:gap-4 lg:bg-transparent"
             onMouseLeave={() => setFocusedLink(null)}
             variants={containerVariants}
             initial={!navbarIsOpen && isUnderLargeSize && "hidden"}
@@ -127,28 +140,29 @@ export default function Header() {
                 ? "show"
                 : "hidden"
             }
-            layout
           >
             <BiX
               size={48}
-              className="absolute top-12 cursor-pointer lg:hidden"
+              className="absolute top-6 cursor-pointer xs:top-12 md:top-24 lg:hidden"
               onClick={() => setNavbarIsOpen((prevCondition) => !prevCondition)}
             />
             {links.map((link) => {
               return (
                 <motion.li
-                  className={cn("relative py-3 px-4 font-poppins ", {
-                    [`text-l-bold text-primary-active lg:text-m-semibold`]:
-                      selectedLink === link,
-                    [`text-l-medium  text-white/60  lg:text-m-medium`]:
-                      selectedLink !== link,
-                  })}
+                  className={cn(
+                    "relative mt-4 py-2 px-6 font-poppins xs:mt-0 xs:py-3 xs:px-4 ",
+                    {
+                      [`text-xl font-semibold text-primary-active sm:text-2xl md:text-3xl lg:text-m-semibold`]:
+                        selectedLink === link,
+                      [`text-xl font-medium text-white/80 sm:text-2xl  md:text-3xl  lg:text-m-medium`]:
+                        selectedLink !== link,
+                    }
+                  )}
                   key={link}
                   onFocus={() => setFocusedLink(() => link)}
                   onMouseEnter={() => setFocusedLink(() => link)}
                   onClick={() => setSelectedLink(() => link)}
                   variants={itemVariants}
-                  layout
                 >
                   <NavbarLink
                     link={link}
