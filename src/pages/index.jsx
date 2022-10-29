@@ -1,8 +1,10 @@
+import cn from "classnames";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function Home({ overviewMemberData }) {
   return (
     <>
       <Head>
@@ -42,7 +44,7 @@ export default function Home() {
                 scale: 0.9,
               }}
               type="button"
-              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-primary-hover to-primary-active px-4 py-3 font-semibold hover:brightness-95"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-gradient-to-tr from-primary-hover  to-primary-active px-4 py-3 font-semibold hover:brightness-95"
             >
               Our Program
             </motion.button>
@@ -69,7 +71,9 @@ export default function Home() {
         <p className="w-full text-center text-base lg:w-3/4 lg:text-lg xl:w-3/5">
           Our vision is to make Institut Teknologi Kalimantan become the center
           for learning and development of information and communication
-          technology in Balikpapan.
+          technology in Balikpapan. We also aim to create an ecosystem of
+          technology developers to build networks and competencies to be ready
+          for work industry.
         </p>
       </section>
 
@@ -82,7 +86,7 @@ export default function Home() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 grid-rows-1 gap-12 xl:grid-cols-3">
-          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-card-1 md:p-12">
+          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-1 md:p-12">
             <h2 className="text-l-bold text-primary-active/[200%] brightness-200">
               Internal Masterclass
             </h2>
@@ -92,7 +96,7 @@ export default function Home() {
               and competencies.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-card-1 md:p-12">
+          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-1 md:p-12">
             <h2 className="text-l-bold text-primary-active/[200%] brightness-200">
               The Boring Workshop
             </h2>
@@ -102,7 +106,7 @@ export default function Home() {
               providing certified workshops.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-card-1 md:p-12">
+          <div className="flex flex-col items-center justify-start gap-4 rounded-lg bg-primary-second p-8 text-center duration-300 ease-in hover:shadow-glow-1 md:p-12">
             <h2 className="text-l-bold text-primary-active/[200%] brightness-200">
               Technology Research and Development
             </h2>
@@ -116,6 +120,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Member */}
       <section className="flex flex-col items-center justify-center gap-6 bg-gradient-to-tl from-primary-second via-primary-second to-primary-second/90 py-24 px-10 text-white md:px-20 xl:px-[120px]">
         <h1 className="text-3xl font-bold tracking-normal text-primary-active md:text-4xl xl:text-5xl">
           Our Member
@@ -125,119 +130,98 @@ export default function Home() {
           Blockchain
         </p>
 
-        <div className="grid grid-cols-1 gap-6 p-2 px-16 md:grid-cols-3 lg:px-0 xl:grid-cols-6">
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover object-top"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/nur-fajri-azhar.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Nur Fajri Azhar</h2>
-              <p className="px-3 pb-4 text-s-medium">Founder</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/nur-fajri-azhar.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Nur Fajri Azhar</h2>
-              <p className="px-3 pb-4 text-s-medium">Founder</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/nur-fajri-azhar.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Nur Fajri Azhar</h2>
-              <p className="px-3 pb-4 text-s-medium">Founder</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/nur-fajri-azhar.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Nur Fajri Azhar</h2>
-              <p className="px-3 pb-4 text-s-medium">Founder</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/ersan-karimi.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Ersan Karimi</h2>
-              <p className="px-3 pb-4 text-s-medium">Front-End Dev</p>
-            </div>
-          </div>
-          <div className="flex flex-col rounded-lg bg-primary-hover">
-            <div className="h-5/6">
-              <Image
-                width="0"
-                height="0"
-                sizes="100%"
-                className="h-full w-full rounded-lg object-cover"
-                alt="Foto Anggota"
-                quality={100}
-                src="/images/nur-fajri-azhar.jpg"
-              />
-            </div>
-            <div className="">
-              <h2 className="px-3 pt-4 text-m-semibold">Nur Fajri Azhar</h2>
-              <p className="px-3 pb-4 text-s-medium">Founder</p>
-            </div>
-          </div>
+        <div className="mt-12 grid auto-rows-max grid-cols-1 gap-12 gap-y-20  md:grid-cols-2 lg:grid-cols-3">
+          {overviewMemberData.length &&
+            overviewMemberData.map(({ name, position, imagePath }, index) => {
+              return (
+                <div
+                  className={cn(
+                    `group flex max-w-sm flex-col justify-start gap-4 rounded-lg bg-gradient-to-tr from-primary-hover via-primary-main/80 to-primary-main p-6 
+                   duration-300 ease-in-out hover:shadow-glow-2`,
+                    {
+                      " md:translate-x-[55%] lg:col-start-2 lg:translate-x-0 ":
+                        index === overviewMemberData.length - 1,
+                    }
+                  )}
+                  key={name}
+                >
+                  <div className="h-[400px] lg:h-[500px]">
+                    <Image
+                      width="0"
+                      height="0"
+                      sizes="100%"
+                      quality="100"
+                      className=" h-full w-full rounded-md bg-cover bg-top object-cover  drop-shadow-xl duration-100 group-hover:drop-shadow-2xl"
+                      alt={`${name} Photo`}
+                      src={imagePath}
+                    />
+                  </div>
+                  <div className="flex w-full flex-col gap-2 py-2">
+                    <h2 className="text-xl font-bold">{name}</h2>
+                    <h3 className="text-base text-white/80">{position}</h3>
+                  </div>
+                </div>
+              );
+            })}
         </div>
-        <div className="flex items-center justify-center">
-          <button
+        <div className="mt-16 flex w-10/12 items-center justify-center lg:w-1/6">
+          <motion.button
             type="button"
-            className="my-8 rounded-full border-2 border-primary-active p-4"
+            className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
+            whileTap={{
+              scale: 0.9,
+            }}
           >
-            Lihat Selengkapnya
-          </button>
+            <Link href="/member">View more</Link>
+          </motion.button>
         </div>
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const overviewMemberData = [
+    {
+      name: "Nur Fajri Azhar",
+      position: "Supervisor",
+      imagePath: "/images/nur-fajri-azhar.webp",
+    },
+    {
+      name: "Muhammad Nasa'i Kairupan",
+      position: "Chief Executive",
+      imagePath: "/images/muhammad-nasai-kairupan.webp",
+    },
+    {
+      name: "Ansar Fadillah",
+      position: "Head of Human Resources Department",
+      imagePath: "/images/ansar-fadillah.webp",
+    },
+    {
+      name: "Ahmad Rusdianto Andarina Syakbani",
+      position: "Head of Technology and Research Department",
+      imagePath: "/images/ahmad-rusdianto.webp",
+    },
+    {
+      name: "Angela Catherina",
+      position: "Executive Secretary",
+      imagePath: "/images/angela-catherina.webp",
+    },
+    {
+      name: "Carmelita Angeline Tanujaya",
+      position: "Executive Treasurer",
+      imagePath: "/images/carmelita-angeline-tanujaya.jpeg",
+    },
+    {
+      name: "Caroline Adi Cahya",
+      position: "Head of Public Relation and Information Media Department",
+      imagePath: "/images/caroline-adi-cahya.webp",
+    },
+  ];
+
+  return {
+    props: {
+      overviewMemberData,
+    },
+  };
 }
