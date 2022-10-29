@@ -14,11 +14,11 @@ Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 
 Production:
 
-- `https://ouroboros-tech.netlify.app`
+- https://ouroboros-tech.netlify.app
 
 Staging
 
-- `https://ouroboros-staging.netlify.app/`
+- https://ouroboros-staging.netlify.app
 
 Local:
 
