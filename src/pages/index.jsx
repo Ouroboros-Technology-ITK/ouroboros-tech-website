@@ -50,7 +50,7 @@ export default function Home({ overviewMemberData }) {
             </motion.button>
           </div>
         </div>
-        <div className="absolute top-0 left-0 -z-10 h-full w-full bg-green-600 opacity-30">
+        <div className="absolute top-0 left-0 -z-10 h-full w-full opacity-30">
           <Image
             width={0}
             height={0}
