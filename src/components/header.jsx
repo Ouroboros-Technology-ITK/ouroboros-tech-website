@@ -114,8 +114,8 @@ export default function Header() {
 
         <Image
           src="/images/ouroboros-logo-tosca-text.png"
-          width={50}
-          height={50}
+          width="0"
+          height="0"
           sizes="100%"
           className="h-auto w-[16%] object-cover sm:w-[12%] xl:w-[8%] "
           alt="Kampus Merdeka Logo"
