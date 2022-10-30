@@ -1,6 +1,6 @@
 # Ouroboros Technologies
 
-This is a official website for Ouroboros Technologies.
+This is the official website for Ouroboros Technologies.
 
 Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 
@@ -14,7 +14,11 @@ Ouroboros Technologies is a Collage Community at Institut Teknologi Kalimantan.
 
 Production:
 
-- `https://ouroboros-tech.netlify.app`
+- https://ouroboros-tech.netlify.app
+
+Staging
+
+- https://ouroboros-staging.netlify.app
 
 Local:
 
