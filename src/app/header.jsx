@@ -132,7 +132,7 @@ export default function Header() {
           <BiMenu
             size={32}
             className="cursor-pointer lg:hidden"
-            onClick={() => setNavbarIsOpen((prevCondition) => !prevCondition)}
+            onClick={() => setNavbarIsOpen(true)}
           />
           <motion.ul
             className="absolute top-0 bottom-0 flex h-screen flex-col items-center  justify-center  gap-0 bg-primary-second/90 backdrop-blur-sm xs:gap-6 md:gap-12 lg:static lg:h-full lg:flex-row lg:gap-4 lg:bg-transparent"
@@ -148,7 +148,7 @@ export default function Header() {
             <BiX
               size={48}
               className="absolute top-6 cursor-pointer xs:top-12 md:top-24 lg:hidden"
-              onClick={() => setNavbarIsOpen((prevCondition) => !prevCondition)}
+              onClick={() => setNavbarIsOpen(false)}
             />
             {links.map((link) => {
               return (
@@ -170,6 +170,10 @@ export default function Header() {
                       `/${link === "Home" ? "" : link.toLowerCase()}`
                     );
                     setSelectedLink(() => link);
+
+                    if (isUnderLargeSize) {
+                      setNavbarIsOpen(false);
+                    }
                   }}
                   variants={itemVariants}
                 >
@@ -179,7 +183,7 @@ export default function Header() {
                     focusedLink={focusedLink}
                     setNavbarIsOpen={() => {
                       if (isUnderLargeSize) {
-                        setNavbarIsOpen((prevCondition) => !prevCondition);
+                        setNavbarIsOpen(false);
                       }
                     }}
                   />
