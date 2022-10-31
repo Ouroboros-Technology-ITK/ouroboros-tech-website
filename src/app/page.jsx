@@ -52,11 +52,11 @@ export default function Page() {
     <>
       <section
         id="hero"
-        className="relative top-0 bottom-0  mt-12 flex h-[120vh] w-full flex-row items-center justify-center px-10 text-white xs:mt-4 xs:h-screen md:mt-0 md:px-20 xl:px-[120px] "
+        className="relative top-0 bottom-0 mt-12 flex h-[120vh] w-full flex-row items-center justify-center px-10 text-white xs:mt-4 xs:h-screen md:mt-0 md:px-20 xl:px-[120px] "
       >
         <div className="flex w-full flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-left ">
-          <div className="mt-12 flex flex-col gap-2  lg:w-3/5 xl:w-3/5 2xl:w-[45%]">
-            <h1 className="text-3xl font-bold  tracking-normal md:text-4xl xl:text-5xl">
+          <div className="mt-12 flex flex-col gap-2 lg:w-3/5 xl:w-3/5 2xl:w-[45%]">
+            <h1 className="text-3xl font-bold tracking-normal md:text-4xl xl:text-5xl">
               Ouroboros Technologies
             </h1>
             <h1 className="text-xl font-semibold tracking-normal text-white/90 md:text-2xl lg:text-3xl xl:text-4xl">
@@ -74,7 +74,7 @@ export default function Page() {
                 scale: 0.9,
               }}
               type="button"
-              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active hover:brightness-90"
             >
               About us
             </motion.button>
@@ -84,7 +84,7 @@ export default function Page() {
                 scale: 0.9,
               }}
               type="button"
-              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-gradient-to-tr from-primary-hover  to-primary-active px-4 py-3 font-semibold hover:brightness-95"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-gradient-to-tr from-primary-hover to-primary-active px-4 py-3 font-semibold hover:brightness-95"
             >
               Our Program
             </motion.button>
@@ -117,7 +117,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="flex flex-col items-center justify-center gap-4 bg-gradient-to-tr from-primary-main via-primary-main to-primary-hover/40  py-24 px-10 text-white md:px-20 lg:px-[120px] xl:px-[120px]">
+      <section className="flex flex-col items-center justify-center gap-4 bg-gradient-to-tr from-primary-main via-primary-main to-primary-hover/40 py-24 px-10 text-white md:px-20 lg:px-[120px] xl:px-[120px]">
         <h1 className="text-3xl font-bold tracking-normal text-primary-active md:text-4xl xl:text-5xl">
           Our Program
         </h1>
@@ -170,14 +170,14 @@ export default function Page() {
           Blockchain
         </p>
 
-        <div className="mt-12 grid auto-rows-max grid-cols-1 gap-12 gap-y-20  md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid auto-rows-max grid-cols-1 gap-12 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
           {overviewMemberData.length &&
             overviewMemberData.map(({ name, position, imagePath }, index) => {
               return (
                 <div
                   className={cn(
                     `group flex max-w-sm flex-col justify-start gap-4 rounded-lg bg-gradient-to-tr from-primary-hover via-primary-main/80 to-primary-main p-6 
-                   duration-300 ease-in-out hover:shadow-glow-2`,
+ duration-300 ease-in-out hover:shadow-glow-2`,
                     {
                       "md:translate-x-[55%] lg:col-start-2 lg:translate-x-0 ":
                         index === overviewMemberData.length - 1,
@@ -191,7 +191,7 @@ export default function Page() {
                       height="0"
                       sizes="100%"
                       quality="100"
-                      className="h-full w-full rounded-md bg-cover bg-top object-cover  drop-shadow-xl duration-100 group-hover:drop-shadow-2xl"
+                      className="h-full w-full rounded-md bg-cover bg-top object-cover drop-shadow-xl duration-100 group-hover:drop-shadow-2xl"
                       alt={`${name} Photo`}
                       src={imagePath}
                     />
@@ -204,16 +204,18 @@ export default function Page() {
               );
             })}
         </div>
-        <div className="mt-16 flex w-10/12 items-center justify-center lg:w-1/6">
-          <motion.button
-            type="button"
-            className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
-            whileTap={{
-              scale: 0.9,
-            }}
-          >
-            <Link href="/member">View more</Link>
-          </motion.button>
+        <div className="mt-16 w-10/12 lg:w-1/6">
+          <Link href="/member" className="flex items-center justify-center">
+            <motion.button
+              type="button"
+              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active hover:brightness-90"
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              View More
+            </motion.button>
+          </Link>
         </div>
       </section>
     </>
