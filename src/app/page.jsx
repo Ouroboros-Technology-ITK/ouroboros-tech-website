@@ -160,7 +160,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Member */}
       <section className="flex flex-col items-center justify-center gap-6 bg-gradient-to-tl from-primary-second via-primary-second to-primary-second/90 py-24 px-10 text-white md:px-20 xl:px-[120px]">
         <h1 className="text-3xl font-bold tracking-normal text-primary-active md:text-4xl xl:text-5xl">
           Our Member
