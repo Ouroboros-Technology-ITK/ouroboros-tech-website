@@ -6,6 +6,7 @@ import cn from "classnames";
 import { LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
   return (
@@ -56,6 +57,7 @@ export default function Header() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
   const links = ["Home", "About", "Member", "Documentation", "Program"];
+  const router = useRouter();
 
   // Variabel variants untuk
   const containerVariants = {
@@ -164,6 +166,9 @@ export default function Header() {
                   onFocus={() => setFocusedLink(() => link)}
                   onMouseEnter={() => setFocusedLink(() => link)}
                   onClick={() => {
+                    router.push(
+                      `/${link === "Home" ? "" : link.toLowerCase()}`
+                    );
                     setSelectedLink(() => link);
                   }}
                   variants={itemVariants}
