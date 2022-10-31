@@ -17,7 +17,7 @@ function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
           whiteSpace: "nowrap",
         }}
       >
-        {link}
+        {link === "Program" ? `Our ${link}` : link}
       </Link>
       {focusedLink === link ? (
         <motion.div
@@ -55,7 +55,7 @@ export default function Header() {
   const [selectedLink, setSelectedLink] = useState("Home");
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
-  const links = ["Home", "About", "Member", "Documentation", "Our Program"];
+  const links = ["Home", "About", "Member", "Documentation", "Program"];
 
   // Variabel variants untuk
   const containerVariants = {
