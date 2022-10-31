@@ -1,17 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/app/**/*.{js,jsx}", "./src/components/**/*.{js,jsx}"],
   theme: {
-    colors: {
-      "primary-main": "#232967",
-      "primary-second": "#191D4D",
-      "primary-active": "#4EC9D0",
-      "primary-hover": "#353FA4",
+    screens: {
+      xs: "360px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
-    fontSize: {
+    extend: {
+      colors: {
+        "primary-main": "#232967",
+        "primary-second": "#191D4D",
+        "primary-active": "#4EC9D0",
+        "primary-hover": "#353FA4",
+      },
+      boxShadow: {
+        "top-footer": "0px -5px 32px -10px rgba(0,0,0,0.1)",
+        "glow-1":
+          "2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset, -2px -2px 20px 1px rgba(78, 201, 208, 0.5),8px 8px 28px 0px rgba(25, 29, 77, 0.5),-2px -2px 8px 0px rgba(78, 201, 208, 0.2),8px 8px 16px 0px rgba(25, 29, 77, 1)",
+        "glow-2":
+          "0px 0px 32px 0px rgba(0, 0, 0, 0.25) inset, -0px -0px 0px 1.5px rgba(78, 201, 208, 0.5),8px 8px 28px 0px rgba(25, 29, 77, 0.5),-0px -0px 16px 8px rgba(78, 201, 208, 0.2),8px 8px 16px 0px rgba(25, 29, 77, 1)",
+      },
+      fontFamily: {
+        poppins: "'Poppins', sans-serif",
+      },
       fontSize: {
         "s-medium": [
           "14px",
@@ -77,8 +92,6 @@ module.exports = {
           },
         ],
       },
-    },
-    extend: {
       backgroundImage: (theme) => ({
         "primary-gradient-to-t": `linear-gradient(to top, ${theme(
           "colors.primary-second"
