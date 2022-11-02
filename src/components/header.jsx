@@ -8,16 +8,16 @@ import Link from "next/link";
 function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
   return (
     <>
-      <Link
+      <button
+        type="button"
         onClick={setNavbarIsOpen}
-        href={`#${link}`}
         style={{
           whiteSpace: "nowrap",
         }}
       >
-        {link}
-      </Link>
-      {focusedLink === link ? (
+        {link.title}
+      </button>
+      {focusedLink === link.title ? (
         <motion.div
           transition={{
             layout: {
@@ -38,7 +38,7 @@ function NavbarLink({ link, selectedLink, focusedLink, setNavbarIsOpen }) {
           layoutId="highlight"
         />
       ) : null}
-      {selectedLink === link ? (
+      {selectedLink === link.title ? (
         <motion.div
           className="absolute right-4 bottom-0 left-4 h-1 rounded-2xl bg-primary-active"
           layoutId="active"
@@ -53,7 +53,13 @@ export default function Header() {
   const [selectedLink, setSelectedLink] = useState("Home");
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [isUnderLargeSize, setIsUnderLargeSize] = useState(false);
-  const links = ["Home", "About", "Member", "Documentation", "Our Program"];
+  const links = [
+    { title: "Home", path: "/" },
+    { title: "About", path: "/about" },
+    { title: "Member", path: "/member" },
+    { title: "Documentation", path: "/documentation" },
+    { title: "Our Program", path: "/our-program" },
+  ];
 
   // Variabel variants untuk
   const containerVariants = {
@@ -148,33 +154,34 @@ export default function Header() {
             />
             {links.map((link) => {
               return (
-                <motion.li
-                  className={cn(
-                    "relative mt-4 py-2 px-6 font-poppins xs:mt-0 xs:py-3 xs:px-4 ",
-                    {
-                      [`text-xl font-semibold text-primary-active sm:text-2xl md:text-3xl lg:text-m-semibold`]:
-                        selectedLink === link,
-                      [`text-xl font-medium text-white/80 sm:text-2xl  md:text-3xl  lg:text-m-medium`]:
-                        selectedLink !== link,
-                    }
-                  )}
-                  key={link}
-                  onFocus={() => setFocusedLink(() => link)}
-                  onMouseEnter={() => setFocusedLink(() => link)}
-                  onClick={() => setSelectedLink(() => link)}
-                  variants={itemVariants}
-                >
-                  <NavbarLink
-                    link={link}
-                    selectedLink={selectedLink}
-                    focusedLink={focusedLink}
-                    setNavbarIsOpen={() => {
-                      if (isUnderLargeSize) {
-                        setNavbarIsOpen((prevCondition) => !prevCondition);
+                <Link key={link} href={link.path}>
+                  <motion.li
+                    className={cn(
+                      "relative mt-4 py-2 px-6 font-poppins xs:mt-0 xs:py-3 xs:px-4 ",
+                      {
+                        [`text-xl font-semibold text-primary-active sm:text-2xl md:text-3xl lg:text-m-semibold`]:
+                          selectedLink === link.title,
+                        [`text-xl font-medium text-white/80 sm:text-2xl  md:text-3xl  lg:text-m-medium`]:
+                          selectedLink !== link.title,
                       }
-                    }}
-                  />
-                </motion.li>
+                    )}
+                    onFocus={() => setFocusedLink(() => link.title)}
+                    onMouseEnter={() => setFocusedLink(() => link.title)}
+                    onClick={() => setSelectedLink(() => link.title)}
+                    variants={itemVariants}
+                  >
+                    <NavbarLink
+                      link={link}
+                      selectedLink={selectedLink}
+                      focusedLink={focusedLink}
+                      setNavbarIsOpen={() => {
+                        if (isUnderLargeSize) {
+                          setNavbarIsOpen((prevCondition) => !prevCondition);
+                        }
+                      }}
+                    />
+                  </motion.li>
+                </Link>
               );
             })}
           </motion.ul>
