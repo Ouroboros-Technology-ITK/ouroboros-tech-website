@@ -29,25 +29,28 @@ export default function Home({ overviewMemberData }) {
             </p>
           </div>
           <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 md:flex-row lg:w-1/2 xl:w-2/6 ">
-            <motion.button
-              whileTap={{
-                scale: 0.9,
-              }}
-              type="button"
-              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
-            >
-              About us
-            </motion.button>
-
-            <motion.button
-              whileTap={{
-                scale: 0.9,
-              }}
-              type="button"
-              className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-gradient-to-tr from-primary-hover  to-primary-active px-4 py-3 font-semibold hover:brightness-95"
-            >
-              Our Program
-            </motion.button>
+            <Link href="/about" className="h-full w-full">
+              <motion.button
+                whileTap={{
+                  scale: 0.9,
+                }}
+                type="button"
+                className="my-2 w-full rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
+              >
+                About Us
+              </motion.button>
+            </Link>
+            <Link href="our-program" className="h-full w-full">
+              <motion.button
+                whileTap={{
+                  scale: 0.9,
+                }}
+                type="button"
+                className="my-2 w-full rounded-2xl border-2 border-primary-active bg-gradient-to-tr from-primary-hover  to-primary-active px-4 py-3 font-semibold hover:brightness-95"
+              >
+                Our Program
+              </motion.button>
+            </Link>
           </div>
         </div>
         <div className="absolute top-0 left-0 -z-10 h-full w-full opacity-30">
@@ -165,15 +168,17 @@ export default function Home({ overviewMemberData }) {
             })}
         </div>
         <div className="mt-16 flex w-10/12 items-center justify-center lg:w-1/6">
-          <motion.button
-            type="button"
-            className="my-2 w-10/12 rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
-            whileTap={{
-              scale: 0.9,
-            }}
-          >
-            <Link href="/member">View more</Link>
-          </motion.button>
+          <Link href="/member" className="h-full w-full">
+            <motion.button
+              type="button"
+              className="my-2 w-full rounded-2xl border-2 border-primary-active bg-white/10 px-4 py-3 font-semibold text-primary-active  hover:brightness-90"
+              whileTap={{
+                scale: 0.9,
+              }}
+            >
+              View more
+            </motion.button>
+          </Link>
         </div>
       </section>
     </>
