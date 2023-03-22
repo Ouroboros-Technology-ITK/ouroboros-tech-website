@@ -31,7 +31,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .display-semi-bold {
+  .display-semibold {
     font-size: 3.75rem;
     font-weight: 600;
     font-style: normal;
@@ -47,7 +47,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-1-regular {
+  .heading-h1-regular {
     font-size: 3rem;
     font-weight: 400;
     font-style: normal;
@@ -55,7 +55,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-1-medium {
+  .heading-h1-medium {
     font-size: 3rem;
     font-weight: 500;
     font-style: normal;
@@ -63,7 +63,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-1-semi-bold {
+  .heading-h1-semibold {
     font-size: 3rem;
     font-weight: 600;
     font-style: normal;
@@ -71,7 +71,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-1-bold {
+  .heading-h1-bold {
     font-size: 3rem;
     font-weight: 700;
     font-style: normal;
@@ -79,7 +79,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-2-regular {
+  .heading-h2-regular {
     font-size: 2.25rem;
     font-weight: 400;
     font-style: normal;
@@ -87,7 +87,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-2-medium {
+  .heading-h2-medium {
     font-size: 2.25rem;
     font-weight: 500;
     font-style: normal;
@@ -95,7 +95,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-2-semi-bold {
+  .heading-h2-semibold {
     font-size: 2.25rem;
     font-weight: 600;
     font-style: normal;
@@ -103,7 +103,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-2-bold {
+  .heading-h2-bold {
     font-size: 2.25rem;
     font-weight: 700;
     font-style: normal;
@@ -111,7 +111,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-3-regular {
+  .heading-h3-regular {
     font-size: 2rem;
     font-weight: 400;
     font-style: normal;
@@ -119,7 +119,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-3-medium {
+  .heading-h3-medium {
     font-size: 2rem;
     font-weight: 500;
     font-style: normal;
@@ -127,7 +127,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-3-semi-bold {
+  .heading-h3-semibold {
     font-size: 2rem;
     font-weight: 600;
     font-style: normal;
@@ -135,7 +135,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-3-bold {
+  .heading-h3-bold {
     font-size: 2rem;
     font-weight: 700;
     font-style: normal;
@@ -143,7 +143,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-4-regular {
+  .heading-h4-regular {
     font-size: 1.75rem;
     font-weight: 400;
     font-style: normal;
@@ -151,7 +151,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-4-medium {
+  .heading-h4-medium {
     font-size: 1.75rem;
     font-weight: 500;
     font-style: normal;
@@ -159,7 +159,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-4-semi-bold {
+  .heading-h4-semibold {
     font-size: 1.75rem;
     font-weight: 600;
     font-style: normal;
@@ -167,7 +167,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-4-bold {
+  .heading-h4-bold {
     font-size: 1.75rem;
     font-weight: 700;
     font-style: normal;
@@ -175,7 +175,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-5-regular {
+  .heading-h5-regular {
     font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
@@ -183,7 +183,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-5-medium {
+  .heading-h5-medium {
     font-size: 1.5rem;
     font-weight: 500;
     font-style: normal;
@@ -191,7 +191,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-5-semi-bold {
+  .heading-h5-semibold {
     font-size: 1.5rem;
     font-weight: 600;
     font-style: normal;
@@ -199,7 +199,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-5-bold {
+  .heading-h5-bold {
     font-size: 1.5rem;
     font-weight: 700;
     font-style: normal;
@@ -207,7 +207,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-6-regular {
+  .heading-h6-regular {
     font-size: 1.25rem;
     font-weight: 400;
     font-style: normal;
@@ -215,7 +215,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-6-medium {
+  .heading-h6-medium {
     font-size: 1.25rem;
     font-weight: 500;
     font-style: normal;
@@ -223,7 +223,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-6-semi-bold {
+  .heading-h6-semibold {
     font-size: 1.25rem;
     font-weight: 600;
     font-style: normal;
@@ -231,7 +231,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .heading-h-6-bold {
+  .heading-h6-bold {
     font-size: 1.25rem;
     font-weight: 700;
     font-style: normal;
@@ -255,7 +255,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .text-18-semi-bold {
+  .text-18-semibold {
     font-size: 1.125rem;
     font-weight: 600;
     font-style: normal;
@@ -287,7 +287,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .text-16-semi-bold {
+  .text-16-semibold {
     font-size: 1rem;
     font-weight: 600;
     font-style: normal;
@@ -319,7 +319,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .text-14-semi-bold {
+  .text-14-semibold {
     font-size: 0.875rem;
     font-weight: 600;
     font-style: normal;
@@ -351,7 +351,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .text-12-semi-bold {
+  .text-12-semibold {
     font-size: 0.75rem;
     font-weight: 600;
     font-style: normal;
@@ -383,7 +383,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .label-18-semi-bold {
+  .label-18-semibold {
     font-size: 1.125rem;
     font-weight: 600;
     font-style: normal;
@@ -415,7 +415,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .label-16-semi-bold {
+  .label-16-semibold {
     font-size: 1rem;
     font-weight: 600;
     font-style: normal;
@@ -447,7 +447,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .label-14-semi-bold {
+  .label-14-semibold {
     font-size: 0.875rem;
     font-weight: 600;
     font-style: normal;
@@ -479,7 +479,7 @@
     text-decoration: none;
     text-transform: none;
   }
-  .label-12-semi-bold {
+  .label-12-semibold {
     font-size: 0.75rem;
     font-weight: 600;
     font-style: normal;
