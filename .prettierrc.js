@@ -5,7 +5,7 @@ module.exports = {
   singleQuote: false,
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
-  importOrder: ["^@/layouts/(.*)$", "^@/components/(.*)$", "^[./]"],
+  importOrder: ["^@/components", "^@/layouts", "^[./]"],
   plugins: [
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
