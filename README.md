@@ -26,28 +26,17 @@ Local:
 
 ### Design
 
-- Design Website : [Figma Link](https://www.figma.com/file/AOZBnikzq6xxqPx8975SgD/Blockchain-ITK-Website?node-id=8%3A2)
-
-## Main Features
-
-- [ ] Homepage
-- [ ] About
-- [ ] Documentation
-- [ ] Members
+- Design Website : [Figma Link]()
 
 ## Tech Stack
 
 ### Commerce
 
-- HTML
 - CSS
   - Tailwind CSS
-- JavaScript
-- Node.js & npm
-- React
-  - Next.js v13
+- Next.js
+  - JavaScript
 - Misc
-  - Framer Motion
   - Prettier
   - ESLint
 
