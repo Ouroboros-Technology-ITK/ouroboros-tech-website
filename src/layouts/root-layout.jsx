@@ -67,12 +67,19 @@ export const RootLayout = ({ children }) => {
               src={logoItk}
               alt="ITK Logo"
               className="h-8 w-full md:h-12"
+              priority
             />
-            <Image src={logoKm} alt="KM Logo" className="h-8 w-full md:h-12" />
+            <Image
+              src={logoKm}
+              alt="KM Logo"
+              className="h-8 w-full md:h-12"
+              priority
+            />
             <Image
               src={logoOuroborosTosca}
               alt="Logo Ouroboros Tosca"
               className="h-8 w-full md:h-12"
+              priority
             />
           </div>
 

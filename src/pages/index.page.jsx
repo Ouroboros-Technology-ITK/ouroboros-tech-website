@@ -40,6 +40,7 @@ const Home = () => (
             src={logoOuroborosToscaText}
             className="h-full w-full object-contain"
             alt="Logo Ouroboros Tosca with Text"
+            priority
           />
         </picture>
       </div>
