@@ -21,6 +21,8 @@
     "prettier/prettier": 0,
     "import/no-unresolved": 0,
     "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": "off",
     "object-curly-newline": "off",
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
@@ -31,14 +33,6 @@
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "warn",
     "react/jsx-props-no-spreading": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": false,
-        "optionalDependencies": false,
-        "peerDependencies": false
-      }
-    ],
     "react/function-component-definition": [
       "error",
       {
