@@ -1,5 +1,5 @@
-# Ignore artifacts:
-node_modules
 .next
+.swc
 build
 coverage
+node_modules
