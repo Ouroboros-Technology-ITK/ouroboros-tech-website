@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  pageExtensions: ["page.jsx"],
   modularizeImports: {
     "react-icons": {
       transform: "react-icons/{{member}}",
