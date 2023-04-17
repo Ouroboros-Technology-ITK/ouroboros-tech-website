@@ -64,6 +64,10 @@ module.exports = {
           },
         },
       },
+      dropShadow: {
+        program: "0 0px 16px rgba(5, 94, 104, 1)",
+        member: "0 10px 10px rgba(5, 94, 104, 1)",
+      },
     },
   },
   plugins: [],
