@@ -2,16 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
-import { Button } from "@/components";
+import { Button, MemberCard } from "@/components";
 
 import { getRootLayout } from "@/layouts";
 
 import logoOuroborosToscaText from "../../public/images/logo-ouroboros-tosca-text.png";
 import ouroborosTeam from "../../public/images/ouroboros-team.jpg";
+import nurFajriAzhar from "../../public/images/nur-fajri-azhar.webp";
+import muhammadNasai from "../../public/images/muhammad-nasai-kairupan.webp";
+import ansarFadil from "../../public/images/ansar-fadillah.webp";
+import ahmadRusdi from "../../public/images/ahmad-rusdianto.webp";
+import angelinaCathe from "../../public/images/angela-catherina.webp";
+import carmelitaAngel from "../../public/images/carmelita-angeline-tanujaya.jpeg";
+import carolineAdi from "../../public/images/caroline-adi-cahya.webp";
 
 const Home = () => (
   <>
-    <section className="m-auto grid grid-rows-[max-content_max-content] items-center gap-12 px-4 sm:container md:items-center lg:grid-cols-[1.5fr_1fr] lg:grid-rows-none lg:px-12 2xl:grid-cols-[1fr_1fr]">
+    <section className="m-auto mt-12 grid grid-rows-[max-content_max-content] items-center gap-12 px-4 sm:container md:items-center lg:grid-cols-[1.5fr_1fr] lg:grid-rows-none lg:px-12 2xl:grid-cols-[1fr_1fr]">
       <div className="flex flex-col items-center gap-6 text-center text-brand-primary-00 lg:items-start lg:text-left">
         <div className="flex flex-col gap-4">
           <h3 className="text-14-regular lg:text-16-regular text-brand-trinity-01/80">
@@ -48,6 +55,7 @@ const Home = () => (
           />
         </picture>
       </div>
+      <div className="absolute right-0 -z-10 h-[450px] w-[450px] rounded-full bg-brand-secondary-06 blur-[650px]" />
     </section>
 
     <section className="mt-20 flex flex-col gap-8 bg-brand-secondary-07 py-12 px-4">
@@ -94,6 +102,101 @@ const Home = () => (
             className="h-full w-full scale-125 object-contain lg:scale-110"
           />
         </picture>
+      </div>
+    </section>
+
+    <section className="mt-6 flex flex-col gap-8 py-6 px-4">
+      <div className="flex flex-col gap-3 py-6 text-center">
+        <h2 className="heading-h6-bold text-brand-trinity-04">Our Program</h2>
+        <h1 className="heading-h3-bold text-brand-primary-00">Program Kami</h1>
+      </div>
+      <div className="m-auto grid grid-cols-1 gap-10 px-20 xl:grid-cols-3">
+        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
+          <h3 className="heading-h5-bold  pb-9 text-center">
+            Internal Masterclass
+          </h3>
+          <p className="text-18-regular h-full pb-8 text-center">
+            We are committed to be ready for work industry, the refore we
+            provide an intensive training program to develop our member skills
+            andompetencies.
+          </p>
+          <Button variant="primary">See Our Activity</Button>
+        </div>
+        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
+          <h3 className="heading-h5-bold pb-9 text-center">
+            The Boring Workshop
+          </h3>
+          <p className="text-18-regular h-full pb-8 text-center">
+            We want to share our knowledge that can help people to upgrade their
+            skills in information and communication technology by providing
+            certified workshops.
+          </p>
+          <Button variant="primary">See Our Activity</Button>
+        </div>
+        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
+          <h3 className="heading-h5-bold pb-9 text-center">
+            Tech Research & Develop
+          </h3>
+          <p className="text-18-regular h-full pb-8 text-center">
+            We are committed to participate in the development of information
+            and communication technology in Indonesia, especially in Balikpapan
+            by releasing conducting related research and releasing related
+            journals.
+          </p>
+          <Button variant="primary">See Our Activity</Button>
+        </div>
+      </div>
+      <div className="absolute right-0 -z-10 h-[450px] w-[450px] rounded-full bg-brand-secondary-06 blur-[650px]" />
+    </section>
+
+    <section className="mt-20 flex flex-col gap-8 bg-brand-secondary-07 py-12 px-4">
+      <div className="flex flex-col gap-3 py-6 text-center">
+        <h2 className="heading-h6-bold text-brand-trinity-04">Our Member</h2>
+        <h1 className="heading-h3-bold text-brand-primary-00">Anggota Kami</h1>
+      </div>
+      <div className="m-auto grid grid-cols-1 justify-items-center gap-7 bg-brand-secondary-07 xl:grid-cols-3 xl:gap-14">
+        <MemberCard
+          name="Nur Fajri Azhar"
+          description="Supervisor"
+          imageSrc={nurFajriAzhar}
+        />
+        <MemberCard
+          name="Muhammad Nasa'i Kairupan"
+          description="Chief Executive"
+          imageSrc={muhammadNasai}
+        />
+        <MemberCard
+          name="Ansar Fadillah"
+          description="Head of Human Resources Department"
+          imageSrc={ansarFadil}
+        />
+        <MemberCard
+          name="Ahmad Rusdianto Andarina Syakbani"
+          description="Head of Technology and Research Department
+"
+          imageSrc={ahmadRusdi}
+        />
+        <MemberCard
+          name="Angela Catherina"
+          description="Executive Secretary"
+          imageSrc={angelinaCathe}
+        />
+        <MemberCard
+          name="Carmelita Angeline Tanujaya"
+          description="Executive Treasurer"
+          imageSrc={carmelitaAngel}
+        />
+        <MemberCard
+          name="Caroline Adi Cahya"
+          description="Head of Public Relation and Information Media Department"
+          imageSrc={carolineAdi}
+        />
+      </div>
+      <div className="flex w-10/12 justify-end">
+        <Button variant="primary">
+          See More
+          <MdArrowForward />
+        </Button>
       </div>
     </section>
   </>
