@@ -4,8 +4,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+
   body {
-    @apply m-auto min-h-screen w-screen max-w-[100vw] overflow-x-hidden bg-brand-primary-08 text-brand-primary-00;
+    @apply m-auto min-h-screen w-screen overflow-x-hidden bg-brand-primary-08 text-brand-primary-00;
     font-family: "Poppins", sans-serif;
   }
 
