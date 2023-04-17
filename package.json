@@ -11,6 +11,8 @@
     "lint:format:fix": "npm run lint -- --fix && npm run format"
   },
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.1.2",
+    "@radix-ui/react-separator": "^1.0.2",
     "@radix-ui/react-toggle-group": "^1.0.3",
     "classnames": "^2.3.2",
     "next": "13.2.4",
@@ -25,7 +27,6 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
