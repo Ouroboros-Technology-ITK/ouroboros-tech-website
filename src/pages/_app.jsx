@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }) => {
   return getLayout(
     <>
       <Head>
-        <title>Ouroboros Techonologies</title>image.png
+        <title>Ouroboros Techonologies</title>
       </Head>
       <Component {...pageProps} />
     </>,
