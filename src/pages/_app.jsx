@@ -8,8 +8,7 @@ const App = ({ Component, pageProps }) => {
   return getLayout(
     <>
       <Head>
-        <title>Ouroboros Techonologies</title>
-        <link rel="shortcut icon" href="/public/favicon.ico" />
+        <title>Ouroboros Techonologies</title>image.png
       </Head>
       <Component {...pageProps} />
     </>,
