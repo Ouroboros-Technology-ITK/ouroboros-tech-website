@@ -16,7 +16,7 @@ import muhammadNasai from "../../public/images/muhammad-nasai-kairupan.webp";
 import nurFajriAzhar from "../../public/images/nur-fajri-azhar.webp";
 import ouroborosTeam from "../../public/images/ouroboros-team.jpg";
 
-const Home = () => (
+const Home = ({ memberData }) => (
   <>
     <section className="m-auto mt-12 grid grid-rows-[max-content_max-content] items-center gap-12 px-4 sm:container md:items-center lg:grid-cols-[1.5fr_1fr] lg:grid-rows-none lg:px-12 2xl:grid-cols-[1fr_1fr]">
       <div className="flex flex-col items-center gap-6 text-center text-brand-primary-00 lg:items-start lg:text-left">
@@ -166,45 +166,12 @@ const Home = () => (
           Anggota Kami
         </h1>
       </div>
-      <div className="m-auto grid grid-cols-1 justify-items-center gap-7 bg-brand-secondary-07 xl:grid-cols-3 xl:gap-14">
-        <MemberCard
-          name="Nur Fajri Azhar"
-          description="Supervisor"
-          imageSrc={nurFajriAzhar}
-        />
-        <MemberCard
-          name="Muhammad Nasa'i Kairupan"
-          description="Chief Executive"
-          imageSrc={muhammadNasai}
-        />
-        <MemberCard
-          name="Ansar Fadillah"
-          description="Head of Human Resources Department"
-          imageSrc={ansarFadil}
-        />
-        <MemberCard
-          name="Ahmad Rusdianto Andarina Syakbani"
-          description="Head of Technology and Research Department
-"
-          imageSrc={ahmadRusdi}
-        />
-        <MemberCard
-          name="Angela Catherina"
-          description="Executive Secretary"
-          imageSrc={angelinaCathe}
-        />
-        <MemberCard
-          name="Carmelita Angeline Tanujaya"
-          description="Executive Treasurer"
-          imageSrc={carmelitaAngel}
-        />
-        <MemberCard
-          name="Caroline Adi Cahya"
-          description="Head of Public Relation and Information Media Department"
-          imageSrc={carolineAdi}
-        />
+      <div className="m-auto grid grid-cols-1 justify-items-center gap-7 bg-brand-secondary-07 md:grid-cols-2 xl:grid-cols-3 xl:gap-14">
+        {memberData.map((member) => (
+          <MemberCard key={member.name} {...member} />
+        ))}
       </div>
-      <div className="flex w-full justify-center xl:w-10/12 xl:justify-end">
+      <div className="flex w-full justify-center">
         <Button variant="primary">
           See More
           <MdArrowForward />
@@ -213,6 +180,51 @@ const Home = () => (
     </section>
   </>
 );
+
+export const getStaticProps = () => {
+  return {
+    props: {
+      memberData: [
+        {
+          name: "Nur Fajri Azhar",
+          description: "Supervisor",
+          imageSrc: nurFajriAzhar,
+        },
+        {
+          name: "Muhammad Nasa'i Kairupan",
+          description: "Chief Executive",
+          imageSrc: muhammadNasai,
+        },
+        {
+          name: "Ansar Fadillah",
+          description: "Head of Human Resources Department",
+          imageSrc: ansarFadil,
+        },
+        {
+          name: "Ahmad Rusdianto Andarina Syakbani",
+          description: "Head of Technology and Research Department",
+          imageSrc: ahmadRusdi,
+        },
+        {
+          name: "Angela Catherina",
+          description: "Executive Secretary",
+          imageSrc: angelinaCathe,
+        },
+        {
+          name: "Carmelita Angeline Tanujaya",
+          description: "Executive Treasurer",
+          imageSrc: carmelitaAngel,
+        },
+        {
+          name: "Caroline Adi Cahya",
+          description:
+            "Head of Public Relation and Information Media Department",
+          imageSrc: carolineAdi,
+        },
+      ],
+    },
+  };
+};
 
 Home.getLayout = getRootLayout;
 
