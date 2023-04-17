@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
-import { Button, MemberCard } from "@/components";
+import { Button, MemberCard, ProgramCard } from "@/components";
 
 import { getRootLayout } from "@/layouts";
 
@@ -16,7 +16,7 @@ import muhammadNasai from "../../public/images/muhammad-nasai-kairupan.webp";
 import nurFajriAzhar from "../../public/images/nur-fajri-azhar.webp";
 import ouroborosTeam from "../../public/images/ouroboros-team.jpg";
 
-const Home = ({ memberData }) => (
+const Home = ({ memberData, ourProgramData }) => (
   <>
     <section className="m-auto mt-12 grid grid-rows-[max-content_max-content] items-center gap-12 px-4 sm:container md:items-center lg:grid-cols-[1.5fr_1fr] lg:grid-rows-none lg:px-12 2xl:grid-cols-[1fr_1fr]">
       <div className="flex flex-col items-center gap-6 text-center text-brand-primary-00 lg:items-start lg:text-left">
@@ -104,6 +104,7 @@ const Home = ({ memberData }) => (
             src={ouroborosTeam}
             alt="Ouroboros Team Picture"
             className="h-full w-full scale-125 object-contain lg:scale-110"
+            priority
           />
         </picture>
       </div>
@@ -118,41 +119,10 @@ const Home = ({ memberData }) => (
           Program Kami
         </h1>
       </div>
-      <div className="m-auto grid grid-cols-1 gap-10 px-20 xl:grid-cols-3">
-        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
-            Internal Masterclass
-          </h3>
-          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
-            We are committed to be ready for work industry, the refore we
-            provide an intensive training program to develop our member skills
-            andompetencies.
-          </p>
-          <Button variant="primary">See Our Activity</Button>
-        </div>
-        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
-            The Boring Workshop
-          </h3>
-          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
-            We want to share our knowledge that can help people to upgrade their
-            skills in information and communication technology by providing
-            certified workshops.
-          </p>
-          <Button variant="primary">See Our Activity</Button>
-        </div>
-        <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
-            Tech Research & Develop
-          </h3>
-          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
-            We are committed to participate in the development of information
-            and communication technology in Indonesia, especially in Balikpapan
-            by releasing conducting related research and releasing related
-            journals.
-          </p>
-          <Button variant="primary">See Our Activity</Button>
-        </div>
+      <div className="m-auto grid max-w-sm grid-cols-1 gap-10 lg:max-w-md xl:max-w-7xl xl:grid-cols-3">
+        {ourProgramData.map((program) => (
+          <ProgramCard key={program.href} {...program} />
+        ))}
       </div>
       <div className="absolute right-0 -z-10 h-[450px] w-[450px] rounded-full bg-brand-secondary-06 blur-[650px]" />
     </section>
@@ -172,10 +142,12 @@ const Home = ({ memberData }) => (
         ))}
       </div>
       <div className="flex w-full justify-center">
-        <Button variant="primary">
-          See More
-          <MdArrowForward />
-        </Button>
+        <Link className="flex items-center" href="/member" tabIndex={-1}>
+          <Button variant="primary">
+            See More
+            <MdArrowForward />
+          </Button>
+        </Link>
       </div>
     </section>
   </>
@@ -220,6 +192,27 @@ export const getStaticProps = () => {
           description:
             "Head of Public Relation and Information Media Department",
           imageSrc: carolineAdi,
+        },
+      ],
+
+      ourProgramData: [
+        {
+          title: "Internal Masterclass",
+          description:
+            "We are committed to be ready for work industry, the refore we provide an intensive training program to develop our member skills andompetencies.",
+          href: "/our-programs/internal-masterclass",
+        },
+        {
+          title: "The Boring Workshop",
+          description:
+            "We want to share our knowledge that can help people to upgrade their skills in information and communication technology by providing certified workshops.",
+          href: "/our-programs/the-boring-workshop",
+        },
+        {
+          title: "Tech Research & Develop",
+          description:
+            "We are committed to participate in the development of information and communication technology in Indonesia, especially in Balikpapan by releasing conducting related research and releasing related journals.",
+          href: "/our-programs/tech-research-and-develop",
         },
       ],
     },
