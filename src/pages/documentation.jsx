@@ -1,6 +1,17 @@
+import Head from "next/head";
+
+import { UnderConstruction } from "@/components";
+
 import { getRootLayout } from "@/layouts";
 
-const Documentation = () => <h1>Documentation</h1>;
+const Documentation = () => (
+  <>
+    <Head>
+      <title>Documentation | Ouroboros Technologies</title>
+    </Head>
+    <UnderConstruction />
+  </>
+);
 
 Documentation.getLayout = getRootLayout;
 
