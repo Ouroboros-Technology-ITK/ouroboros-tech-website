@@ -5,12 +5,12 @@
 
 @layer base {
   body {
-    @apply w-screen max-w-[100vw] overflow-x-hidden text-brand-primary-00;
+    @apply m-auto min-h-screen w-screen max-w-[100vw] overflow-x-hidden bg-brand-primary-08 text-brand-primary-00;
     font-family: "Poppins", sans-serif;
   }
 
   #__next {
-    @apply flex min-h-screen flex-col;
+    @apply relative flex min-h-screen w-full flex-col;
   }
 }
 
