@@ -6,15 +6,15 @@ import { Button, MemberCard } from "@/components";
 
 import { getRootLayout } from "@/layouts";
 
-import logoOuroborosToscaText from "../../public/images/logo-ouroboros-tosca-text.png";
-import ouroborosTeam from "../../public/images/ouroboros-team.jpg";
-import nurFajriAzhar from "../../public/images/nur-fajri-azhar.webp";
-import muhammadNasai from "../../public/images/muhammad-nasai-kairupan.webp";
-import ansarFadil from "../../public/images/ansar-fadillah.webp";
 import ahmadRusdi from "../../public/images/ahmad-rusdianto.webp";
 import angelinaCathe from "../../public/images/angela-catherina.webp";
+import ansarFadil from "../../public/images/ansar-fadillah.webp";
 import carmelitaAngel from "../../public/images/carmelita-angeline-tanujaya.jpeg";
 import carolineAdi from "../../public/images/caroline-adi-cahya.webp";
+import logoOuroborosToscaText from "../../public/images/logo-ouroboros-tosca-text.png";
+import muhammadNasai from "../../public/images/muhammad-nasai-kairupan.webp";
+import nurFajriAzhar from "../../public/images/nur-fajri-azhar.webp";
+import ouroborosTeam from "../../public/images/ouroboros-team.jpg";
 
 const Home = () => (
   <>
@@ -60,8 +60,12 @@ const Home = () => (
 
     <section className="mt-20 flex flex-col gap-8 bg-brand-secondary-07 py-12 px-4">
       <div className="flex flex-col gap-3 py-6 text-center">
-        <h2 className="heading-h6-bold text-brand-trinity-04">About Us</h2>
-        <h1 className="heading-h3-bold text-brand-primary-00">Tentang Kami</h1>
+        <h2 className="text-12-bold md:heading-h6-bold text-brand-trinity-04">
+          About Us
+        </h2>
+        <h1 className="heading-h6-bold md:heading-h3-bold text-brand-primary-00">
+          Tentang Kami
+        </h1>
       </div>
       <div className="m-auto grid grid-rows-[max-content_1fr] justify-items-center gap-12 bg-brand-secondary-07 sm:container lg:grid-cols-2 lg:grid-rows-none lg:items-center">
         <div className="flex w-10/12 flex-col gap-4 lg:w-full 2xl:w-10/12">
@@ -107,15 +111,19 @@ const Home = () => (
 
     <section className="mt-6 flex flex-col gap-8 py-6 px-4">
       <div className="flex flex-col gap-3 py-6 text-center">
-        <h2 className="heading-h6-bold text-brand-trinity-04">Our Program</h2>
-        <h1 className="heading-h3-bold text-brand-primary-00">Program Kami</h1>
+        <h2 className="text-12-bold md:heading-h6-bold text-brand-trinity-04">
+          Our Program
+        </h2>
+        <h1 className="md:heading-h3-bold heading-h6-bold text-brand-primary-00">
+          Program Kami
+        </h1>
       </div>
       <div className="m-auto grid grid-cols-1 gap-10 px-20 xl:grid-cols-3">
         <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h5-bold  pb-9 text-center">
+          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
             Internal Masterclass
           </h3>
-          <p className="text-18-regular h-full pb-8 text-center">
+          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
             We are committed to be ready for work industry, the refore we
             provide an intensive training program to develop our member skills
             andompetencies.
@@ -123,10 +131,10 @@ const Home = () => (
           <Button variant="primary">See Our Activity</Button>
         </div>
         <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h5-bold pb-9 text-center">
+          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
             The Boring Workshop
           </h3>
-          <p className="text-18-regular h-full pb-8 text-center">
+          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
             We want to share our knowledge that can help people to upgrade their
             skills in information and communication technology by providing
             certified workshops.
@@ -134,10 +142,10 @@ const Home = () => (
           <Button variant="primary">See Our Activity</Button>
         </div>
         <div className="flex flex-col rounded-lg border border-brand-secondary-02 bg-brand-primary-08 px-12 py-8 transition delay-75 ease-in-out hover:drop-shadow-program">
-          <h3 className="heading-h5-bold pb-9 text-center">
+          <h3 className="heading-h6-bold md:heading-h5-bold pb-9 text-center">
             Tech Research & Develop
           </h3>
-          <p className="text-18-regular h-full pb-8 text-center">
+          <p className="text-12-regular md:text-18-regular h-full pb-8 text-center">
             We are committed to participate in the development of information
             and communication technology in Indonesia, especially in Balikpapan
             by releasing conducting related research and releasing related
@@ -151,8 +159,12 @@ const Home = () => (
 
     <section className="mt-20 flex flex-col gap-8 bg-brand-secondary-07 py-12 px-4">
       <div className="flex flex-col gap-3 py-6 text-center">
-        <h2 className="heading-h6-bold text-brand-trinity-04">Our Member</h2>
-        <h1 className="heading-h3-bold text-brand-primary-00">Anggota Kami</h1>
+        <h2 className="text-12-bold md:heading-h6-bold text-brand-trinity-04">
+          Our Member
+        </h2>
+        <h1 className="heading-h6-bold md:heading-h3-bold text-brand-primary-00">
+          Anggota Kami
+        </h1>
       </div>
       <div className="m-auto grid grid-cols-1 justify-items-center gap-7 bg-brand-secondary-07 xl:grid-cols-3 xl:gap-14">
         <MemberCard
@@ -192,7 +204,7 @@ const Home = () => (
           imageSrc={carolineAdi}
         />
       </div>
-      <div className="flex w-10/12 justify-end">
+      <div className="flex w-full justify-center xl:w-10/12 xl:justify-end">
         <Button variant="primary">
           See More
           <MdArrowForward />
