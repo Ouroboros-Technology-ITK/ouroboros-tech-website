@@ -1,6 +1,8 @@
+import { UnderConstruction } from "@/components";
+
 import { getRootLayout } from "@/layouts";
 
-const OurPrograms = () => <h1>OurPrograms</h1>;
+const OurPrograms = () => <UnderConstruction />;
 
 OurPrograms.getLayout = getRootLayout;
 

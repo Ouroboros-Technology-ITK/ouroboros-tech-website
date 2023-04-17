@@ -1,6 +1,8 @@
+import { UnderConstruction } from "@/components";
+
 import { getRootLayout } from "@/layouts";
 
-const Documentation = () => <h1>Documentation</h1>;
+const Documentation = () => <UnderConstruction />;
 
 Documentation.getLayout = getRootLayout;
 
