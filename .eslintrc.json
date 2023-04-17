@@ -30,6 +30,7 @@
     "react/jsx-props-no-spreading": 0,
     "arrow-body-style": 0,
     "react/button-has-type": 0,
+    "react/jsx-one-expression-per-line": 0,
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "react-hooks/rules-of-hooks": "error",
