@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>Ouroboros Techonologies</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon"  href="/public/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>,
