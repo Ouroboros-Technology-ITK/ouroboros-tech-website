@@ -1,7 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --ring: 24 5.4% 63.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 12 6.5% 15.1%;
+  }
+}
 
 @layer base {
   html {
@@ -9,7 +74,7 @@
   }
 
   body {
-    @apply m-auto min-h-screen w-screen overflow-x-hidden bg-brand-primary-08 text-brand-primary-00;
+    @apply bg-brand-primary-08 text-brand-primary-00 m-auto min-h-screen w-screen overflow-x-hidden;
     font-family: "Poppins", sans-serif;
   }
 
@@ -27,6 +92,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .display-medium {
     font-size: 3.75rem;
     font-weight: 500;
@@ -35,6 +101,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .display-semibold {
     font-size: 3.75rem;
     font-weight: 600;
@@ -43,6 +110,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .display-bold {
     font-size: 3.75rem;
     font-weight: 700;
@@ -51,6 +119,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h1-regular {
     font-size: 3rem;
     font-weight: 400;
@@ -59,6 +128,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h1-medium {
     font-size: 3rem;
     font-weight: 500;
@@ -67,6 +137,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h1-semibold {
     font-size: 3rem;
     font-weight: 600;
@@ -75,6 +146,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h1-bold {
     font-size: 3rem;
     font-weight: 700;
@@ -83,6 +155,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h2-regular {
     font-size: 2.25rem;
     font-weight: 400;
@@ -91,6 +164,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h2-medium {
     font-size: 2.25rem;
     font-weight: 500;
@@ -99,6 +173,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h2-semibold {
     font-size: 2.25rem;
     font-weight: 600;
@@ -107,6 +182,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h2-bold {
     font-size: 2.25rem;
     font-weight: 700;
@@ -115,6 +191,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h3-regular {
     font-size: 2rem;
     font-weight: 400;
@@ -123,6 +200,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h3-medium {
     font-size: 2rem;
     font-weight: 500;
@@ -131,6 +209,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h3-semibold {
     font-size: 2rem;
     font-weight: 600;
@@ -139,6 +218,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h3-bold {
     font-size: 2rem;
     font-weight: 700;
@@ -147,6 +227,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h4-regular {
     font-size: 1.75rem;
     font-weight: 400;
@@ -155,6 +236,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h4-medium {
     font-size: 1.75rem;
     font-weight: 500;
@@ -163,6 +245,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h4-semibold {
     font-size: 1.75rem;
     font-weight: 600;
@@ -171,6 +254,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h4-bold {
     font-size: 1.75rem;
     font-weight: 700;
@@ -179,6 +263,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h5-regular {
     font-size: 1.5rem;
     font-weight: 400;
@@ -187,6 +272,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h5-medium {
     font-size: 1.5rem;
     font-weight: 500;
@@ -195,6 +281,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h5-semibold {
     font-size: 1.5rem;
     font-weight: 600;
@@ -203,6 +290,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h5-bold {
     font-size: 1.5rem;
     font-weight: 700;
@@ -211,6 +299,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h6-regular {
     font-size: 1.25rem;
     font-weight: 400;
@@ -219,6 +308,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h6-medium {
     font-size: 1.25rem;
     font-weight: 500;
@@ -227,6 +317,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h6-semibold {
     font-size: 1.25rem;
     font-weight: 600;
@@ -235,6 +326,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .heading-h6-bold {
     font-size: 1.25rem;
     font-weight: 700;
@@ -243,6 +335,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-18-regular {
     font-size: 1.125rem;
     font-weight: 400;
@@ -251,6 +344,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-18-medium {
     font-size: 1.125rem;
     font-weight: 500;
@@ -259,6 +353,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-18-semibold {
     font-size: 1.125rem;
     font-weight: 600;
@@ -267,6 +362,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-18-bold {
     font-size: 1.125rem;
     font-weight: 700;
@@ -275,6 +371,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-16-regular {
     font-size: 1rem;
     font-weight: 400;
@@ -283,6 +380,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-16-medium {
     font-size: 1rem;
     font-weight: 500;
@@ -291,6 +389,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-16-semibold {
     font-size: 1rem;
     font-weight: 600;
@@ -299,6 +398,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-16-bold {
     font-size: 1rem;
     font-weight: 700;
@@ -307,6 +407,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-14-regular {
     font-size: 0.875rem;
     font-weight: 400;
@@ -315,6 +416,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-14-medium {
     font-size: 0.875rem;
     font-weight: 500;
@@ -323,6 +425,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-14-semibold {
     font-size: 0.875rem;
     font-weight: 600;
@@ -331,6 +434,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-14-bold {
     font-size: 0.875rem;
     font-weight: 700;
@@ -339,6 +443,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-12-regular {
     font-size: 0.75rem;
     font-weight: 400;
@@ -347,6 +452,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-12-medium {
     font-size: 0.75rem;
     font-weight: 500;
@@ -355,6 +461,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-12-semibold {
     font-size: 0.75rem;
     font-weight: 600;
@@ -363,6 +470,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .text-12-bold {
     font-size: 0.75rem;
     font-weight: 700;
@@ -371,6 +479,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-18-regular {
     font-size: 1.125rem;
     font-weight: 400;
@@ -379,6 +488,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-18-medium {
     font-size: 1.125rem;
     font-weight: 500;
@@ -387,6 +497,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-18-semibold {
     font-size: 1.125rem;
     font-weight: 600;
@@ -395,6 +506,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-18-bold {
     font-size: 1.125rem;
     font-weight: 700;
@@ -403,6 +515,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-16-regular {
     font-size: 1rem;
     font-weight: 400;
@@ -411,6 +524,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-16-medium {
     font-size: 1rem;
     font-weight: 500;
@@ -419,6 +533,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-16-semibold {
     font-size: 1rem;
     font-weight: 600;
@@ -427,6 +542,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-16-bold {
     font-size: 1rem;
     font-weight: 700;
@@ -435,6 +551,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-14-regular {
     font-size: 0.875rem;
     font-weight: 400;
@@ -443,6 +560,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-14-medium {
     font-size: 0.875rem;
     font-weight: 500;
@@ -451,6 +569,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-14-semibold {
     font-size: 0.875rem;
     font-weight: 600;
@@ -459,6 +578,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-14-bold {
     font-size: 0.875rem;
     font-weight: 700;
@@ -467,6 +587,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-12-regular {
     font-size: 0.75rem;
     font-weight: 400;
@@ -475,6 +596,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-12-medium {
     font-size: 0.75rem;
     font-weight: 500;
@@ -483,6 +605,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-12-semibold {
     font-size: 0.75rem;
     font-weight: 600;
@@ -491,6 +614,7 @@
     text-decoration: none;
     text-transform: none;
   }
+
   .label-12-bold {
     font-size: 0.75rem;
     font-weight: 700;
